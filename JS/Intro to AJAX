@@ -1,0 +1,13 @@
+
+Competencies
+
+AJAX stands for Asynchronous Javascript And XML
+Asynchronous means some code will run while others won’t
+XML stands for eXtenisble Markup Language, it stores and transports data
+AJAX allows you to update certain portions of your page dynamically without having to reload the entire page. (jQuery only makes visual changes, AJAX changes will be persistent)
+
+Applications
+Use AJAX in conjunction with jQuery to create dynamic web page components
+
+AJAX documentation:
+https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started
