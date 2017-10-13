@@ -43,6 +43,8 @@ $menu_links.click(function(){
 	})
 </script>
 
-We are declaring an index to our array of menu links so that we can properly call upon the correct one when clicked. We are also declaring which specific picture we will be using. Next, we are mapping the correct captions to the correct picture using the the indexed picture’s attributes. Same with the title. 
+We are declaring an index to our array of menu links so that we can properly call upon the correct one when clicked. 
+We are also declaring which specific picture we will be using. Next, we are mapping the correct captions to the correct picture
+using the the indexed picture’s attributes. Same with the title. 
 
 Give it a shot.
