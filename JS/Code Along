@@ -2,8 +2,8 @@ Download and unzip. http://c0185057.cdn1.cloudfiles.rackspacecloud.com/Screencas
 
 Take a look at the files, we’ll be working in “picture 1”
 Add a script tag to include our javascript before the closing body tag.
-<script type=”text/javascript” charset=”utf-8”>
-	var pictures, $menu_links = $(“#menu a”), $title = $(“title), $image = $(“#container img”), $caption = $(“.caption”);
+<script type="text/javascript" charset="utf-8">
+	var pictures, $menu_links = $("#menu a"), $title = $("title"), $image = $("#container img"), $caption = $(".caption");
 </script>
 Declaring variables to save time later on. Use $ for variables so you know they are jQuery variables.
 
