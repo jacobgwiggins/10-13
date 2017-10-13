@@ -1,0 +1,48 @@
+Download and unzip. http://c0185057.cdn1.cloudfiles.rackspacecloud.com/Screencasts-jQuery-and-AJAX-Files.zip
+
+Take a look at the files, we’ll be working in “picture 1”
+Add a script tag to include our javascript before the closing body tag.
+<script type=”text/javascript” charset=”utf-8”>
+	var pictures, $menu_links = $(“#menu a”), $title = $(“title), $image = $(“#container img”), $caption = $(“.caption”);
+</script>
+Declaring variables to save time later on. Use $ for variables so you know they are jQuery variables.
+
+
+Use .ajax() method
+<script type=”text/javascript” charset=”utf-8”>
+	var pictures, $menu_links = $(“#menu a”), $title = $(“title), $image = $(“#container img”), $caption = $(“.caption”);
+
+	$.ajax({
+url: “pictures.json”,
+success: function(data){
+$pictures = $(“picture”, data);
+}
+}) 
+</script>
+
+Ajax methods have 2 parts: url and success. URL is the path of the component you want to target, in this case, it’s the JSON (javascript object notation, basically turns JS code into a hash library) 
+file that has all the info of the pictures. The success portion tells the function what to do when it “succeeds”/moves onto the next part of the process. In this case, it’s supposed to store the “picture” and the data. 
+
+
+Now we need to make a click handler for our menu links that we declared.
+<script type=”text/javascript” charset=”utf-8”>
+	var pictures, $menu_links = $(“#menu a”), $title = $(“title), $image = $(“#container img”), $caption = $(“.caption”);
+
+	$.ajax({
+url: “pictures.json”,
+success: function(data){
+pictures = data;
+}
+}) 
+$menu_links.click(function(){
+	var index = $menu_links.index(this);
+	var picture = pictures[index].picture;
+	$caption.text(picture.caption);
+		$title.text(“Gallery 1 - “ + picture.caption);
+		return false;
+	})
+</script>
+
+We are declaring an index to our array of menu links so that we can properly call upon the correct one when clicked. We are also declaring which specific picture we will be using. Next, we are mapping the correct captions to the correct picture using the the indexed picture’s attributes. Same with the title. 
+
+Give it a shot.
